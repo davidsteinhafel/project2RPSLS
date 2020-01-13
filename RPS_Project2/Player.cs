@@ -8,36 +8,22 @@ namespace RPS_Project2
 {
     class Player
     {
-        public string name;
         
         
-
-
-        public List<Gesture> gestures = new List<Gesture>();
-
-
+        
+        public List<Gesture> gestures;
 
         public Player()
         {
-            
+            gestures = new List<Gesture> { new Rock(), new Paper(), new Scissor(), new Lizard(), new Spock() };
 
             
-
-            Gesture gesture1 = new Rock();
-            Gesture gesture2 = new Paper();
-            Gesture gesture3 = new Scissor();
-            Gesture gesture4 = new Spock();
-            Gesture gesture5 = new Lizard();
-            gestures.Add(gesture1);
-            gestures.Add(gesture2);
-            gestures.Add(gesture3);
-            gestures.Add(gesture4);
-            gestures.Add(gesture5);
-
         }
+        
+
         public void ChooseGesture()
         {
-            Console.WriteLine("Please choose a move");
+            Console.WriteLine("Choose your move!");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -57,9 +43,11 @@ namespace RPS_Project2
                 case "Spock":
                     Console.WriteLine(gestures[4]);
                     break;
-                    
+
             }
-            
+
         }
-    }
-}
+
+
+    } 
+}    

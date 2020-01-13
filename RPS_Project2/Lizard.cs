@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPS_Project2
 {
-    class Lizard
+    class Lizard : Gesture
     {
+        public Lizard()
+        {
+            name = "Lizard";
+        }
     }
 }

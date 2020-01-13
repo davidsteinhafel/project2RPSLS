@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPS_Project2
 {
-    class Scissor
+    class Scissor : Gesture
     {
+        public Scissor()
+        {
+            name = "Scissor";
+        }
     }
 }

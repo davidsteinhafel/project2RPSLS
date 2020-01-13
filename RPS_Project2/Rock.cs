@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace RPS_Project2
 {
-    class Rock
+    class Rock : Gesture
     {
+        
+
+        public Rock()
+        {
+            name = "Rock";
+        }
     }
 }

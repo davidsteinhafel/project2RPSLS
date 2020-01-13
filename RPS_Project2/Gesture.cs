@@ -10,9 +10,12 @@ namespace RPS_Project2
     {
         public string name;
         
-        public Gesture(string name)
+        
+        
+        public Gesture()
         {
-            this.name = name;
+            
+            
             
         }
     }
