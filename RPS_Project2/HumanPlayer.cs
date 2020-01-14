@@ -26,8 +26,8 @@ namespace RPS_Project2
             gestures[2] = "3";
             gestures[3] = "4";
             gestures[4] = "5";
-
         }
+        
         public override void SetName()
         {
             Console.WriteLine("Please type your name in!");

@@ -9,11 +9,8 @@ namespace RPS_Project2
     class Gesture 
     {
         public string name;
-        Random rand = new Random();
-        public Gesture(string name)
+        public Gesture()
         {
-
-            
 
         }
     }

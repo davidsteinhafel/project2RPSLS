@@ -11,8 +11,10 @@ namespace RPS_Project2
         //public HumanPlayer player1 = new HumanPlayer();
         //public HumanPlayer player2 = new HumanPlayer();
         //public AiPlayer player3 = new AiPlayer();
-        Player player1;
-        Player player2;
+        
+        public Player player1;
+        public Player player2;
+        
 
         public void StartGame() 
         {
@@ -41,6 +43,110 @@ namespace RPS_Project2
             {
                 ChooseNumberOfPlayers();
             }
+            do
+            {
+                while(player1.choice == "Rock")
+                {
+                    if(player2.choice == "Scissors")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Paper")
+                    {
+                        ++player2.score;
+                    }
+                    if (player2.choice == "Spock")
+                    {
+                        ++player2.score;
+                    }
+                    if (player2.choice == "Lizard")
+                    {
+                        ++player1.score;
+                    }
+
+                }
+                while (player1.choice == "Scissors")
+                {
+                    if (player2.choice == "Rock")
+                    {
+                        ++player2.score;
+                    }
+                    if (player2.choice == "Paper")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Spock")
+                    {
+                        ++player2.score;
+                    }
+                    if (player2.choice == "Lizard")
+                    {
+                        ++player1.score;
+                    }
+
+                }
+                while (player1.choice == "Paper")
+                {
+                    if (player2.choice == "Scissors")
+                    {
+                        ++player2.score;
+                    }
+                    if (player2.choice == "Rock")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Spock")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Lizard")
+                    {
+                        ++player2.score;
+                    }
+
+                }
+                while (player1.choice == "Spock")
+                {
+                    if (player2.choice == "Scissors")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Paper")
+                    {
+                        ++player2.score;
+                    }
+                    if (player2.choice == "Rock")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Lizard")
+                    {
+                        ++player2.score;
+                    }
+
+                }
+                while (player1.choice == "Lizard")
+                {
+                    if (player2.choice == "Scissors")
+                    {
+                        ++player2.score;
+                    }
+                    if (player2.choice == "Paper")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Spock")
+                    {
+                        ++player1.score;
+                    }
+                    if (player2.choice == "Rock")
+                    {
+                        ++player2.score;
+                    }
+
+                }
+
+            } while (player1.score < 2 && player2.score < 2);
         }
 
         //public void AddComputer()

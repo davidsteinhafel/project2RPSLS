@@ -20,30 +20,6 @@ namespace RPS_Project2
         }
         public abstract void SetName();
         public abstract void ChooseGesture();
-        //{
-        //    Console.WriteLine("CHOOSE YOUR MOVE!");
-        //    choice = Console.WriteLine();
-
-        //    //switch (choice.ToUpper())
-        //    //{
-        //    //    case "ROCK":
-        //    //        Console.WriteLine(gestures[0]);
-        //    //        break;
-        //    //    case "PAPER":
-        //    //        Console.WriteLine(gestures[1]);
-        //    //        break;
-        //    //    case "SCISSOR":
-        //    //        Console.WriteLine(gestures[2]);
-        //    //        break;
-        //    //    case "LIZARD":
-        //    //        Console.WriteLine(gestures[3]);
-        //    //        break;
-        //    //    case "SPOCK":
-        //    //        Console.WriteLine(gestures[4]);
-        //    //        break;
-
-        //    //}
-        //}
         
     } 
 }    
