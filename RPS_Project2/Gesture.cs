@@ -8,7 +8,7 @@ namespace RPS_Project2
 {
     class Gesture
     {
-        public string name;
+        public int name;
 
         public Gesture()
         {

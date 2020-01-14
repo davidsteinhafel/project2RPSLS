@@ -10,7 +10,23 @@ namespace RPS_Project2
     {
         public Paper()
         {
-            name = "Paper";
+            name = "PAPER";
         }
+        //public void CheckPaper()
+        //{
+        //    switch ("PAPER")
+        //    {
+        //        case "ROCK":
+        //            Console.WriteLine("YOU WIN");
+        //            break;
+        //        case "SCISSOR":
+        //            Console.WriteLine("YOU LOSE");
+        //            break;
+        //        case "LIZARD":
+        //            Console.WriteLine("YOU LOSE");
+        //        case "SPOCK":
+        //            Console.WriteLine("YOU WIN");
+        //    }
+        //}
     }
 }

@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace RPS_Project2
 {
-    class Player
+    public abstract class Player
     {
+        public string name;
+        public int score;
         public string choice;
-        
-        
-        
+
+
+
         public List<Gesture> gestures;
-        
+
         public Player()
         {
-            gestures = new List<Gesture> { new Rock("ROCK"), new Paper(), new Scissor(), new Lizard(), new Spock() };
+            gestures = new List<Gesture> { new Rock(), new Paper(), new Scissor(), new Lizard(), new Spock() };
 
             choice = Console.ReadLine();
 
@@ -47,6 +49,10 @@ namespace RPS_Project2
                     break;
 
             }
+        }
+        public void CheckScissor()
+        {
+            
         }
     } 
 }    

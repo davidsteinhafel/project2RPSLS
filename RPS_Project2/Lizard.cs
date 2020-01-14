@@ -10,7 +10,22 @@ namespace RPS_Project2
     {
         public Lizard()
         {
-            name = "Lizard";
+            name = "LIZARD";
         }
+        //public void CheckLizard()
+        //{
+        //    switch ("LIZARD")
+        //    {
+        //        case "ROCK":
+        //            Console.WriteLine("YOU LOSE");
+        //            break;
+        //        case "PAPER":
+        //            Console.WriteLine("YOU WIN");
+        //        case "SPOCK":
+        //            Console.WriteLine("YOU WIN");
+        //        case "SCISSORS":
+        //            Console.WriteLine("YOU LOSE");
+        //    }
+        //}
     }
 }

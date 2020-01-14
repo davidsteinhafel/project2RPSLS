@@ -11,28 +11,27 @@ namespace RPS_Project2
         public Scissor()
         {
             name = "Scissor";
-              
-        }
-        public void CheckScissor()
-        {
-            switch ("Scissor")
-            {
-                case "ROCK":
-                    Console.WriteLine("YOU LOSE");
-                    break;
-                case "PAPER":
-                    Console.WriteLine("YOU WIN");
-                    break;
-                case "Lizard":
-                    Console.WriteLine("YOU WIN");
-                    break;
-                case "SPOCK":
-                    Console.WriteLine("YOU LOSE");
-                    break;
 
-            }
         }
+            //      switch ("Scissor")
+            //{
+            //    case "ROCK":
+            //        Console.WriteLine("YOU LOSE");
+            //        break;
+            //    case gestures[0]:
+            //        Console.WriteLine("YOU WIN");
+            //        break;
+            //    case "Lizard":
+            //        Console.WriteLine("YOU WIN");
+            //        break;
+            //    case "SPOCK":
+            //        Console.WriteLine("YOU LOSE");
+            //        break;
+            //    case "SCISSOR":
+            //        ChooseGesture();
+            //        break;
+            //}
 
-        
+
     }
 }

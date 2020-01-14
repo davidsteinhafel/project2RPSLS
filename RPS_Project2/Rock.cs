@@ -10,9 +10,24 @@ namespace RPS_Project2
     {
         
 
-        public Rock(string name)
+        public Rock()
         {
-            name = "Rock";
+            name = "ROCK";
         }
+        //public void CheckRock()
+        //{
+        //    switch ("ROCK")
+        //    {
+        //        case "PAPER":
+        //            Console.WriteLine("YOU LOSE");
+        //            break;
+        //        case "SCISSORS":
+        //            Console.WriteLine("YOU WIN");
+        //        case "SPOCK":
+        //            Console.WriteLine("YOU LOSE");
+        //        case "LIZARD":
+        //            Console.WriteLine("YOU WIN");
+        //    }
+        //}
     }
 }

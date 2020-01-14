@@ -10,7 +10,23 @@ namespace RPS_Project2
     {
         public Spock()
         {
-            name = "Spock";
+            name = "SPOCK";
         }
+        //public void CheckSpock()
+        //{
+        //    switch ("SPOCK")
+        //    {
+        //        case "ROCK":
+        //            Console.WriteLine("YOU WIN");
+        //            break;
+        //        case "PAPER":
+        //            Console.WriteLine("YOU LOSE");
+        //        case "SCISSORS":
+        //            Console.WriteLine("YOU WIN");
+        //        case "LIZARD":
+        //            Console.WriteLine("YOU LOSE");
+        //            break;
+        //    }
+        //}
     }
 }
