@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Computer.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="Gesture.cs" />
     <Compile Include="HumanPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

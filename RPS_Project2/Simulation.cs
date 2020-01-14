@@ -11,15 +11,20 @@ namespace RPS_Project2
         //public HumanPlayer player1 = new HumanPlayer();
         //public HumanPlayer player2 = new HumanPlayer();
         //public AiPlayer player3 = new AiPlayer();
-        
+
         public Player player1;
         public Player player2;
-        
 
-        public void StartGame() 
+
+        public void StartGame()
         {
             Console.WriteLine("Welcome to RPSLS!!!");
-            ChooseNumberOfPlayers();
+            string numberOfPlayers = ChooseNumberOfPlayers();
+            SetNumberOfPlayers(numberOfPlayers);
+            player1.SetName();
+            player2.SetName();
+            PlayerGestures();
+
         }
         public string ChooseNumberOfPlayers()
         {
@@ -29,6 +34,7 @@ namespace RPS_Project2
         }
         public void SetNumberOfPlayers(string numberOfPlayers)
         {
+
             if (numberOfPlayers == "1")
             {
                 player1 = new HumanPlayer();
@@ -41,13 +47,23 @@ namespace RPS_Project2
             }
             else
             {
-                ChooseNumberOfPlayers();
+                StartGame();
             }
+
+        }
+        public void PlayerGestures()
+        {
+            player1.ChooseGesture();
+            player2.ChooseGesture();
+            CompareGestures();
+        }
+        public void CompareGestures()
+        {
             do
             {
-                while(player1.choice == "Rock")
+                while (player1.choice == "Rock")
                 {
-                    if(player2.choice == "Scissors")
+                    if (player2.choice == "Scissors")
                     {
                         ++player1.score;
                     }
@@ -62,6 +78,10 @@ namespace RPS_Project2
                     if (player2.choice == "Lizard")
                     {
                         ++player1.score;
+                    }
+                    if(player2.choice == "Rock")
+                    {
+                        PlayerGestures();
                     }
 
                 }
@@ -83,6 +103,10 @@ namespace RPS_Project2
                     {
                         ++player1.score;
                     }
+                    if(player2.choice == "Scissors")
+                    {
+                        PlayerGestures();
+                    }
 
                 }
                 while (player1.choice == "Paper")
@@ -102,6 +126,10 @@ namespace RPS_Project2
                     if (player2.choice == "Lizard")
                     {
                         ++player2.score;
+                    }
+                    if(player2.choice == "Paper")
+                    {
+                        PlayerGestures();
                     }
 
                 }
@@ -123,6 +151,10 @@ namespace RPS_Project2
                     {
                         ++player2.score;
                     }
+                    if(player2.choice == "Spock")
+                    {
+                        PlayerGestures();
+                    }
 
                 }
                 while (player1.choice == "Lizard")
@@ -143,11 +175,40 @@ namespace RPS_Project2
                     {
                         ++player2.score;
                     }
-
+                    if (player2.choice == "Lizard")
+                    {
+                        PlayerGestures();
+                    }
                 }
 
-            } while (player1.score < 2 && player2.score < 2);
+            } while (player1.score < 2 && player2.score < 2);  
         }
+        public void PointCounter()
+        {
+            if(player1.score >= 2)
+            {
+                Console.WriteLine("PLAYER 1 WINS!!!");
+                Console.WriteLine("PLAY AGAIN? YES = 1 NO = 2");
+                string playAgainChoice = Console.ReadLine();
+                if(playAgainChoice == "1")
+                {
+                    StartGame();
+                }
+
+            }
+            if(player2.score >= 2)
+            {
+                Console.WriteLine("PLAYER 2 WINS!!!");
+                Console.WriteLine("PLAY AGAIN? YES = 1 NO = 2");
+                string playAgainChoice = Console.ReadLine();
+                if(playAgainChoice == "1")
+                {
+                    StartGame();
+                }
+            }
+        }
+    }
+}
 
         //public void AddComputer()
         //{
@@ -179,24 +240,7 @@ namespace RPS_Project2
         //    Console.WriteLine("PLAYER VS COMPUTER?");
         //    string mode = Console.ReadLine();
             
-        //    switch (mode.ToUpper())
-        //    {
-        //        case "PLAYER VS PLAYER":
-        //            AddPlayers();
-        //            break;
-        //        case "PLAYER VS COMPUTER":
-        //            AddComputer();
-        //            break;
-
-        //    }
-        //    if(mode == "PLAYER VS PLAYER")
-        //    {
-        //        PlayerVsPlayerStart();
-        //    }
-        //    else
-        //    {
-        //        PlayerVsComputerStart();
-        //    }
+        //    
             
         //}
 
@@ -205,5 +249,5 @@ namespace RPS_Project2
 
 
         
-    }
-}
+   
+
