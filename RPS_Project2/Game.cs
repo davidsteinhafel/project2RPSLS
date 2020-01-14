@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPS_Project2
 {
-    class Simulation
+    class Game
     {
         public Player player1;
         public Player player2;
@@ -73,7 +73,6 @@ namespace RPS_Project2
         }
         public void CompareGestures()
         {
-
             if (player1.choice == "ROCK")
             {
                 if (player2.choice == "SCISSORS")
@@ -212,29 +211,6 @@ namespace RPS_Project2
                 {
                     Console.WriteLine("\nDraw");
                     PlayerGestures();
-                }
-            }
-        }
-        public void PointCounter()
-        {
-            if (player1.score >= 2)
-            {
-                Console.WriteLine("PLAYER 1 WINS!!!");
-                Console.WriteLine("PLAY AGAIN? YES = 1 NO = 2");
-                string playAgainChoice = Console.ReadLine();
-                if (playAgainChoice == "1")
-                {
-                    StartGame();
-                }
-            }
-            if (player2.score >= 2)
-            {
-                Console.WriteLine("PLAYER 2 WINS!!!");
-                Console.WriteLine("PLAY AGAIN? YES = 1 NO = 2");
-                string playAgainChoice = Console.ReadLine();
-                if (playAgainChoice == "1")
-                {
-                    StartGame();
                 }
             }
         }

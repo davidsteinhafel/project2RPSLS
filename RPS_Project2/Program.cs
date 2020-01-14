@@ -10,7 +10,7 @@ namespace RPS_Project2
     {
         static void Main(string[] args)
         {
-            Simulation simulationGame = new Simulation();
+            Game simulationGame = new Game();
             simulationGame.StartGame();
             
         }

@@ -19,7 +19,7 @@ namespace RPS_Project2
         {
             Console.WriteLine("Please type your name in!\n");
             userName = Console.ReadLine();
-            Console.WriteLine("\nWelcome " + userName+ "\n");
+            Console.WriteLine("\nWelcome " + userName + "\n");
         }
         public override void ChooseGesture()
         {
@@ -30,16 +30,16 @@ namespace RPS_Project2
                 case "1":
                     choice = gestures[0];
                     break;
-                case ("2"):
+                case "2":
                     choice = gestures[1];
                     break;
-                case ("3"):
+                case "3":
                     choice = gestures[2];
                     break;
-                case ("4"):
+                case "4":
                     choice = gestures[3];
                     break;
-                case ("5"):
+                case "5":
                     choice = gestures[4];
                     break;
                 default:
