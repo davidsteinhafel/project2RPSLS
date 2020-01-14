@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace RPS_Project2
 {
-    class Gesture
+    class Gesture 
     {
-        public int name;
-
-        public Gesture()
+        public string name;
+        Random rand = new Random();
+        public Gesture(string name)
         {
+
             
-            
-            
+
         }
     }
 }

@@ -11,48 +11,39 @@ namespace RPS_Project2
         public string name;
         public int score;
         public string choice;
-
-
-
-        public List<Gesture> gestures;
+        public List<string> gestures;
 
         public Player()
         {
-            gestures = new List<Gesture> { new Rock(), new Paper(), new Scissor(), new Lizard(), new Spock() };
-
+            gestures = new List<string>() {"ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK" };
             choice = Console.ReadLine();
-
-
         }
-        public void ChooseGesture()
-        {
-            Console.WriteLine("CHOOSE YOUR MOVE!");
-            string result = Console.ReadLine();
-            result = choice;
+        public abstract void SetName();
+        public abstract void ChooseGesture();
+        //{
+        //    Console.WriteLine("CHOOSE YOUR MOVE!");
+        //    choice = Console.WriteLine();
 
-            switch (choice.ToUpper())
-            {
-                case "ROCK":
-                    Console.WriteLine(gestures[0]);
-                    break;
-                case "PAPER":
-                    Console.WriteLine(gestures[1]);
-                    break;
-                case "SCISSOR":
-                    Console.WriteLine(gestures[2]);
-                    break;
-                case "LIZARD":
-                    Console.WriteLine(gestures[3]);
-                    break;
-                case "SPOCK":
-                    Console.WriteLine(gestures[4]);
-                    break;
+        //    //switch (choice.ToUpper())
+        //    //{
+        //    //    case "ROCK":
+        //    //        Console.WriteLine(gestures[0]);
+        //    //        break;
+        //    //    case "PAPER":
+        //    //        Console.WriteLine(gestures[1]);
+        //    //        break;
+        //    //    case "SCISSOR":
+        //    //        Console.WriteLine(gestures[2]);
+        //    //        break;
+        //    //    case "LIZARD":
+        //    //        Console.WriteLine(gestures[3]);
+        //    //        break;
+        //    //    case "SPOCK":
+        //    //        Console.WriteLine(gestures[4]);
+        //    //        break;
 
-            }
-        }
-        public void CheckScissor()
-        {
-            
-        }
+        //    //}
+        //}
+        
     } 
 }    

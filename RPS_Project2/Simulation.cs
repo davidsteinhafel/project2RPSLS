@@ -30,7 +30,7 @@ namespace RPS_Project2
             if (numberOfPlayers == "1")
             {
                 player1 = new HumanPlayer();
-                player2 = new AiPlayer();
+                player2 = new Computer();
             }
             else if (numberOfPlayers == "2")
             {
