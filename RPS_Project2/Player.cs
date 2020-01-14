@@ -8,46 +8,45 @@ namespace RPS_Project2
 {
     class Player
     {
+        public string choice;
         
         
         
         public List<Gesture> gestures;
-
+        
         public Player()
         {
-            gestures = new List<Gesture> { new Rock(), new Paper(), new Scissor(), new Lizard(), new Spock() };
+            gestures = new List<Gesture> { new Rock("ROCK"), new Paper(), new Scissor(), new Lizard(), new Spock() };
 
-            
+            choice = Console.ReadLine();
+
+
         }
-        
-
         public void ChooseGesture()
         {
-            Console.WriteLine("Choose your move!");
-            string choice = Console.ReadLine();
+            Console.WriteLine("CHOOSE YOUR MOVE!");
+            string result = Console.ReadLine();
+            result = choice;
 
-            switch (choice)
+            switch (choice.ToUpper())
             {
-                case "Rock":
+                case "ROCK":
                     Console.WriteLine(gestures[0]);
                     break;
-                case "Paper":
+                case "PAPER":
                     Console.WriteLine(gestures[1]);
                     break;
-                case "Scissors":
+                case "SCISSOR":
                     Console.WriteLine(gestures[2]);
                     break;
-                case "Lizard":
+                case "LIZARD":
                     Console.WriteLine(gestures[3]);
                     break;
-                case "Spock":
+                case "SPOCK":
                     Console.WriteLine(gestures[4]);
                     break;
 
             }
-
         }
-
-
     } 
 }    

@@ -10,7 +10,7 @@ namespace RPS_Project2
     {
         
 
-        public Rock()
+        public Rock(string name)
         {
             name = "Rock";
         }

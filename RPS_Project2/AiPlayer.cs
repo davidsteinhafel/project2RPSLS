@@ -9,9 +9,6 @@ namespace RPS_Project2
     class AiPlayer : Player
     {
         public string name;
-        public AiPlayer computer;
-        
-
 
         public AiPlayer()
         {
@@ -19,17 +16,9 @@ namespace RPS_Project2
             
             name = "Computer";
 
-            
-
-
 
         }
-        public void AddComputer()
-        {
-            computer = new AiPlayer();
-            Console.WriteLine(name + " added");
-            
-        }
+        
         
         
     }

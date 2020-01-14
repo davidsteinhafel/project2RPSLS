@@ -8,26 +8,65 @@ namespace RPS_Project2
 {
     class Simulation
     {
+        public HumanPlayer player1 = new HumanPlayer();
+        public HumanPlayer player2 = new HumanPlayer();
+        public AiPlayer player3 = new AiPlayer();
+
         public void StartGame() 
         {
+            SelectGameMode();
             
-            AiPlayer player3 = new AiPlayer();
 
-            HumanPlayer player1 = new HumanPlayer();
+
+        }
+        public void AddComputer()
+        {
+            player3 = new AiPlayer();
+            
+
+        }
+        public void PlayerVsPlayerStart()
+        {
+            player1.ChooseGesture();
+            player2.ChooseGesture();
+            Console.ReadLine();
+        }
+        public void PlayerVsComputerStart()
+        {
+            player1.ChooseGesture();
+            player3.ChooseGesture();
+        }
+
+        public void AddPlayers()
+        {
             player1.ChooseName();
-
-            HumanPlayer player2 = new HumanPlayer();
             player2.ChooseName();
-
-            if (player2 == null)
+        }
+        public void SelectGameMode()
+        {
+            Console.WriteLine("SELECT GAME MODE:");
+            Console.WriteLine("PLAYER VS PLAYER");
+            Console.WriteLine("PLAYER VS COMPUTER?");
+            string mode = Console.ReadLine();
+            
+            switch (mode.ToUpper())
             {
-                player3.AddComputer();
+                case "PLAYER VS PLAYER":
+                    AddPlayers();
+                    break;
+                case "PLAYER VS COMPUTER":
+                    AddComputer();
+                    break;
+
+            }
+            if(mode == "PLAYER VS PLAYER")
+            {
+                PlayerVsPlayerStart();
             }
             else
             {
-                player2.ChooseName();
+                PlayerVsComputerStart();
             }
-
         }
         
 
