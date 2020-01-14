@@ -12,14 +12,11 @@ namespace RPS_Project2
         public int score;
         public string choice;
         public List<string> gestures;
-
         public Player()
         {
-            gestures = new List<string>() {"ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK" };
-            choice = Console.ReadLine();
+            gestures = new List<string>() { "ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK" };
         }
         public abstract void SetName();
         public abstract void ChooseGesture();
-        
-    } 
-}    
+    }
+}

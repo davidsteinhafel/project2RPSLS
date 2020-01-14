@@ -9,28 +9,25 @@ namespace RPS_Project2
     class HumanPlayer : Player
     {
         public string userName;
-        
-
         public HumanPlayer()
         {
-            
-  
+
+
 
         }
-        
-        
         public override void SetName()
         {
-            Console.WriteLine("Please type your name in!");
+            Console.WriteLine("Please type your name in!\n");
             userName = Console.ReadLine();
+            Console.WriteLine("\nWelcome " + userName+ "\n");
         }
         public override void ChooseGesture()
         {
-            Console.WriteLine("Please select your choice. Rock = 1 , Paper = 2 , Scissors = 3 , Lizard = 4 , Spock = 5");
+            Console.WriteLine("\nPlease select your choice. Rock = 1 , Paper = 2 , Scissors = 3 , Lizard = 4 , Spock = 5\n");
             string userInput = Console.ReadLine();
             switch (userInput)
             {
-                case ("1"):
+                case "1":
                     choice = gestures[0];
                     break;
                 case ("2"):
@@ -42,29 +39,13 @@ namespace RPS_Project2
                 case ("4"):
                     choice = gestures[3];
                     break;
+                case ("5"):
+                    choice = gestures[4];
+                    break;
+                default:
+                    ChooseGesture();
+                    break;
             }
         }
-
-
-
-
     }
 }
-        //switch (mode.ToUpper())
-        //    {
-        //        case "PLAYER VS PLAYER":
-        //            AddPlayers();
-        //            break;
-        //        case "PLAYER VS COMPUTER":
-        //            AddComputer();
-        //            break;
-
-        //    }
-        //    if(mode == "PLAYER VS PLAYER")
-        //    {
-        //        PlayerVsPlayerStart();
-        //    }
-        //    else
-        //    {
-        //        PlayerVsComputerStart();
-        //    }

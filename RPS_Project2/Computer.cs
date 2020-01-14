@@ -8,11 +8,8 @@ namespace RPS_Project2
 {
     class Computer : Player
     {
-        
-
         public Computer()
-        {
-            
+        {  
         }
         public override void SetName()
         {
@@ -21,12 +18,8 @@ namespace RPS_Project2
         public override void ChooseGesture()
         {
             Random rand = new Random();
-            choice = (gestures[rand.Next(0, 5)]);
-            
-            
+            choice = gestures[rand.Next(0, gestures.Count)];
+            Console.WriteLine("\n" + choice + "\n");
         }
-
-
-
     }
 }
