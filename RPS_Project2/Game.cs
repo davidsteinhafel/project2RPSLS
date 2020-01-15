@@ -73,145 +73,20 @@ namespace RPS_Project2
         }
         public void CompareGestures()
         {
-            if (player1.choice == "ROCK")
+
+            if (player1.choice.losesTo.Contains(player2.choice.name))
             {
-                if (player2.choice == "SCISSORS")
-                {
-                    ++player1.score;
-                    Console.WriteLine("\nP1 Wins");
-                }
-                else if (player2.choice == "PAPER")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "SPOCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "LIZARD")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "ROCK")
-                {
-                    Console.WriteLine("\nDraw");
-                    PlayerGestures();
-                }
+                Console.WriteLine("Player 1 Loses!");
+                player2.score++;
             }
-            if (player1.choice == "SCISSORS")
+            else if (player2.choice.losesTo.Contains(player1.choice.name))
             {
-                if (player2.choice == "ROCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "PAPER")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "SPOCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "LIZARD")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "SCISSORS")
-                {
-                    Console.WriteLine("\nDraw");
-                    PlayerGestures();
-                }
+                Console.WriteLine("Player 2 Loses");
+                player1.score++;
             }
-            if (player1.choice == "PAPER")
+            else
             {
-                if (player2.choice == "SCISSORS")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "ROCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "SPOCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "LIZARD")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "PAPER")
-                {
-                    Console.WriteLine("\nDraw");
-                    PlayerGestures();
-                }
-            }
-            if (player1.choice == "SPOCK")
-            {
-                if (player2.choice == "SCISSORS")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "PAPER")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "ROCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "LIZARD")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "SPOCK")
-                {
-                    Console.WriteLine("\nDraw");
-                    PlayerGestures();
-                }
-            }
-            if (player1.choice == "LIZARD")
-            {
-                if (player2.choice == "SCISSORS")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "PAPER")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "SPOCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player1.score;
-                }
-                else if (player2.choice == "ROCK")
-                {
-                    Console.WriteLine("\nP1 Wins");
-                    ++player2.score;
-                }
-                else if (player2.choice == "LIZARD")
-                {
-                    Console.WriteLine("\nDraw");
-                    PlayerGestures();
-                }
+                Console.WriteLine("DRAW!");
             }
         }
     }

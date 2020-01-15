@@ -19,7 +19,7 @@ namespace RPS_Project2
         {
             Random rand = new Random();
             choice = gestures[rand.Next(0, gestures.Count)];
-            Console.WriteLine("\n" + choice + "\n");
+            Console.WriteLine("\n" + choice.name + "\n");
         }
     }
 }
